@@ -62,6 +62,7 @@ void vecAddKernel(int* A, int* B, int* C, int size) {
 		C[idx] = A[idx] + B[idx];
 }
 
+__host__
 void errCatch(cudaError_t err) {
 	if (err != cudaSuccess) {
 		cout << cudaGetErrorString(err) << " in " << __FILE__ << " at line " << __LINE__ << endl;
